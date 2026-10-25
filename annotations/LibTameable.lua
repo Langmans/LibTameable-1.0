@@ -1,0 +1,79 @@
+---@meta
+-- Types for LibTameable-1.0, for the language server only (not in the .toc).
+
+---@alias LibTameableKind "all"|"rare"|"normal"
+---@alias LibTameableRanks table<number, LibTameableRank>
+---@alias LibTameableBeasts table<number, LibTameableBeast>
+
+---A rank of a hunter pet ability.
+---@class LibTameableRank
+---@field ability number the spell ID of the ability's rank 1
+---@field rank number
+---@field level number the pet level it needs
+---@field families number[] the pet families (CreatureFamily IDs) that can learn it, none for all
+---@field teachers number[] NPC IDs of the tameable beasts that teach it
+
+---A tameable beast that teaches a pet ability rank.
+---@class LibTameableBeast
+---@field name string English
+---@field family number CreatureFamily ID
+---@field minLevel number
+---@field maxLevel number
+---@field elite true?
+---@field rare true?
+---@field pins table<number, number[]>? per uiMapID, pin positions as x1, y1, x2, y2, ... (percent)
+---@field zones number[]? AreaTable IDs, for a beast in an instance (no map pins)
+
+---@class LibTameableFamilies
+---@field wolf number
+---@field cat number
+---@field spider number
+---@field bear number
+---@field boar number
+---@field crocolisk number
+---@field carrionBird number
+---@field crab number
+---@field gorilla number
+---@field raptor number
+---@field tallstrider number
+---@field scorpid number
+---@field turtle number
+---@field bat number
+---@field hyena number
+---@field birdOfPrey number
+---@field windSerpent number
+---@field dragonhawk number
+---@field ravager number
+---@field warpStalker number
+---@field sporebat number
+---@field netherRay number
+---@field serpent number
+---@field fox number
+
+---@class LibTameableKinds
+---@field all LibTameableKind
+---@field rare LibTameableKind
+---@field normal LibTameableKind
+
+---@class LibTameable
+---@field clients table<number, string>
+---@field families LibTameableFamilies
+---@field kinds LibTameableKinds
+---@field client string?
+---@field ranks table<number, LibTameableRank>
+---@field beasts table<number, LibTameableBeast>
+---@field teaches table<number, number[]>?
+---@field abilityRanks table<number, number[]>?
+---@field byKind table<string, table<number, number[]>>
+---@field NewData fun(self: LibTameable, client: string, minor: number): LibTameableRanks?, LibTameableBeasts?
+---@field GetClient fun(self: LibTameable): string?
+---@field HasData fun(self: LibTameable): boolean
+---@field GetRank fun(self: LibTameable, spellID: number): number?, number?, number?
+---@field GetRankInfo fun(self: LibTameable, spellID: number): LibTameableRank?
+---@field GetAbilityRanks fun(self: LibTameable, spellID: number): number[]?
+---@field CanLearn fun(self: LibTameable, family: number, spellID: number): boolean
+---@field GetTeachers fun(self: LibTameable, spellID: number, kind: LibTameableKind?): number[]?
+---@field GetTeaches fun(self: LibTameable, npcID: number): number[]?
+---@field GetBeast fun(self: LibTameable, npcID: number): LibTameableBeast?
+---@field IterateRanks fun(self: LibTameable): (fun(t: table, k: number?): number, LibTameableRank), table<number, LibTameableRank>
+---@field IterateBeasts fun(self: LibTameable): (fun(t: table, k: number?): number, LibTameableBeast), table<number, LibTameableBeast>

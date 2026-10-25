@@ -1,0 +1,9 @@
+-- busted settings; tests/check.lua runs busted with these from the repository root.
+return {
+    default = {
+        ROOT = { "tests" },
+        pattern = "_spec",
+        helper = "tests/helper.lua",
+        output = "tests/output.lua",
+    },
+}

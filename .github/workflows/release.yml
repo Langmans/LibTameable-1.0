@@ -1,0 +1,29 @@
+# Pushing a tag (the library's MINOR, e.g. 1) runs the CI checks, then builds the zip with BigWigsMods/packager
+# (LibStub from the .pkgmeta externals), uploads it to CurseForge and attaches it to a GitHub
+# release. The CurseForge upload is skipped while the CF_API_KEY secret or the project ID in
+# LibTameable-1.0.toc is missing.
+name: Release
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  check:
+    uses: ./.github/workflows/ci.yml
+
+  release:
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # The packager builds the changelog from the commits since the previous tag.
+          fetch-depth: 0
+      - uses: BigWigsMods/packager@v2

@@ -1,0 +1,9 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+    <!-- What an addon that embeds the library includes: the library, then each client's data (only
+         the running client's fills it). LibStub must be loaded before (the addon's own copy, or this
+         one's .toc). -->
+    <Script file="LibTameable-1.0.lua"/>
+    <Script file="Data\Era.lua"/>
+    <Script file="Data\TBC.lua"/>
+    <Script file="Data\Forever.lua"/>
+</Ui>

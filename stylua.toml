@@ -1,0 +1,9 @@
+syntax = "Lua51"
+column_width = 120
+line_endings = "Unix"
+indent_type = "Spaces"
+indent_width = 4
+quote_style = "AutoPreferDouble"
+call_parentheses = "Always"
+# Keeps guard clauses like `if not x then return end` on one line.
+collapse_simple_statement = "ConditionalOnly"

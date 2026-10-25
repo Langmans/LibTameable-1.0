@@ -1,0 +1,22 @@
+{
+    "flavors": ["forever", "classic_era", "classic"],
+    "library": ["annotations/", "Libs/"],
+    "ignore": ["tests/", "coverage/", ".release/", ".lua/", ".luarocks/", ".cache/", ".busted", ".luacov", "*.rockspec"],
+    "diagnostics": {
+        "enable": [
+            "need-check-nil",
+            "unknown-local-type",
+            "unknown-param-type",
+            "unknown-return-type",
+            "unknown-field-type",
+            "incomplete-signature-doc"
+        ],
+        "severity": {
+            "unknown-local-type": "warning",
+            "unknown-param-type": "warning",
+            "unknown-return-type": "warning",
+            "unknown-field-type": "warning",
+            "incomplete-signature-doc": "warning"
+        }
+    }
+}

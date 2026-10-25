@@ -1,0 +1,6 @@
+coverage/
+Libs/
+.release/
+.lua/
+.luarocks/
+.cache/

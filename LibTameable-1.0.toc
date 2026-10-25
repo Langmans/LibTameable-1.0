@@ -1,0 +1,9 @@
+## Interface: 16001, 11509, 20506
+## Title: LibTameable-1.0
+## Notes: The hunter pet abilities each tameable beast teaches, and where to find it.
+## Author: Langmans
+## Version: @project-version@
+## X-License: GPL-3.0-or-later
+
+Libs\LibStub\LibStub.lua
+lib.xml

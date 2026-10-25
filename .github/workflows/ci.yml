@@ -1,0 +1,61 @@
+# Lint and tests on every push and pull request; release.yml runs the same job before a release.
+#
+# Lua 5.1.5 and LuaRocks come from the leafo actions, the test rocks from libtameable-dev-1.rockspec,
+# StyLua from its own action (installed only; tests/check.lua runs it), WoW Lua LS from its GitHub
+# release, pinned and checked against the release's checksum. tests/check.lua then fetches LibStub
+# into Libs/ and runs everything; under CI a missing WoW Lua LS fails instead of being skipped.
+# The JUnit report shows failed tests on the run and on pull requests.
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_call:
+
+env:
+  STYLUA_VERSION: v2.6.0
+  WOWLUA_LS_VERSION: v0.34.2
+  WOWLUA_LS_SHA256: 50d13ae9fc2ec85142c1ebc8238e817cc4db06cc953471c1df17f4c149c853e5
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      checks: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: leafo/gh-actions-lua@v13
+        with:
+          luaVersion: "5.1.5"
+      - uses: leafo/gh-actions-luarocks@v6
+      - name: Install the test rocks
+        run: luarocks install --only-deps libtameable-dev-1.rockspec
+      - uses: JohnnyMorganz/stylua-action@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          version: ${{ env.STYLUA_VERSION }}
+          args: --version
+      - name: Install WoW Lua LS
+        run: |
+          curl -sSfL -o "$RUNNER_TEMP/wowlua_ls" \
+            "https://github.com/TradeSkillMaster/wowlua-ls/releases/download/$WOWLUA_LS_VERSION/wowlua_ls-x86_64-unknown-linux-gnu"
+          echo "$WOWLUA_LS_SHA256  $RUNNER_TEMP/wowlua_ls" | sha256sum -c -
+          chmod +x "$RUNNER_TEMP/wowlua_ls"
+          echo "WOWLUA_LS=$RUNNER_TEMP/wowlua_ls" >> "$GITHUB_ENV"
+      - run: lua tests/check.lua
+      - name: Test report
+        if: ${{ !cancelled() }}
+        uses: mikepenz/action-junit-report@v6
+        with:
+          report_paths: coverage/junit.xml
+          check_name: Tests
+          # A table of every test, passed ones included, on the check and the run's summary;
+          # a failed test shows its error log.
+          include_passed: true
+          detailed_summary: true
+          failed_summary: true
+          failed_summary_logs: true
+          include_time_in_summary: true
+          simplified_summary: true

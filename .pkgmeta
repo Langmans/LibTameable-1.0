@@ -1,0 +1,17 @@
+package-as: LibTameable-1.0
+
+# LibStub is fetched at package time and never committed, pinned to the commit of an Ace3 release
+# (Release-r1403) on its GitHub mirror. tests/libs.lua reads this block and fetches the same commit
+# into Libs/ for the tests.
+externals:
+  Libs/LibStub:
+    url: https://github.com/WoWUIDev/Ace3.git
+    commit: d295b12f8b889a30e86e0e901c5494df4b149c49
+    path: LibStub
+
+ignore:
+  - annotations
+  - coverage
+  - tests
+  - libtameable-dev-1.rockspec
+  - stylua.toml

@@ -1,0 +1,8 @@
+# Changelog
+
+## Unreleased
+
+- GetRank, GetRankInfo, GetAbilityRanks, CanLearn, GetTeachers, GetTeaches,
+  GetBeast, IterateRanks, IterateBeasts, HasData and GetClient.
+- GetTeachers takes a kind: every teacher, only rares or only the rest.
+- Data for Classic Era, Burning Crusade Classic and WoW: Forever.
