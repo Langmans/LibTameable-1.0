@@ -51,6 +51,8 @@ end
 -- has C_PetInfo.CanPetEatItem: HasFoodData() is false there.
 if Tameable:HasFoodData() then
     local kind = Tameable:GetFoodKind(117) -- Tough Jerky: "meat"
+    -- Whether a family eats it, by the client's own diets: true, false, or nil when unknown.
+    local eats = Tameable:CanEat(Tameable.families.wolf, 414) -- Dalaran Sharp: false
 end
 ```
 

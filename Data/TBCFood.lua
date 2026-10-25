@@ -4,9 +4,34 @@
 
 ---@type LibTameable
 local lib = LibStub("LibTameable-1.0")
-local F = lib:NewFoods("tbc", 1)
-if not F then return end
-local K = lib.foodKinds
+local F, D = lib:NewFoods("tbc", 1)
+if not F or not D then return end
+local K, P = lib.foodKinds, lib.families
+
+-- What each family eats, from the client's CreatureFamily.PetFoodMask.
+D[P.wolf] = { [K.meat] = true }
+D[P.cat] = { [K.meat] = true, [K.fish] = true }
+D[P.spider] = { [K.meat] = true }
+D[P.bear] = { [K.meat] = true, [K.fish] = true, [K.cheese] = true, [K.bread] = true, [K.fungus] = true, [K.fruit] = true }
+D[P.boar] = { [K.meat] = true, [K.fish] = true, [K.cheese] = true, [K.bread] = true, [K.fungus] = true, [K.fruit] = true }
+D[P.crocolisk] = { [K.meat] = true, [K.fish] = true }
+D[P.carrionBird] = { [K.meat] = true, [K.fish] = true }
+D[P.crab] = { [K.fish] = true, [K.bread] = true, [K.fungus] = true, [K.fruit] = true }
+D[P.gorilla] = { [K.fungus] = true, [K.fruit] = true }
+D[P.raptor] = { [K.meat] = true }
+D[P.tallstrider] = { [K.cheese] = true, [K.fungus] = true, [K.fruit] = true }
+D[P.scorpid] = { [K.meat] = true }
+D[P.turtle] = { [K.fish] = true, [K.fungus] = true, [K.fruit] = true, [K.rawFish] = true }
+D[P.bat] = { [K.fungus] = true, [K.fruit] = true }
+D[P.hyena] = { [K.meat] = true, [K.fruit] = true }
+D[P.birdOfPrey] = { [K.meat] = true }
+D[P.windSerpent] = { [K.fish] = true, [K.cheese] = true, [K.bread] = true }
+D[P.dragonhawk] = { [K.meat] = true, [K.fish] = true, [K.fruit] = true, [K.rawFish] = true }
+D[P.ravager] = { [K.meat] = true }
+D[P.warpStalker] = { [K.fish] = true, [K.fruit] = true, [K.rawFish] = true }
+D[P.sporebat] = { [K.cheese] = true, [K.bread] = true, [K.fungus] = true, [K.fruit] = true }
+D[P.netherRay] = { [K.meat] = true }
+D[P.serpent] = { [K.meat] = true, [K.fish] = true, [K.rawFish] = true }
 
 F[117] = K.meat
 F[414] = K.cheese

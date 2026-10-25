@@ -3,6 +3,9 @@
 
 ---@alias LibTameableKind "all"|"rare"|"normal"
 ---@alias LibTameableFoodKind "meat"|"fish"|"cheese"|"bread"|"fungus"|"fruit"|"rawFish"
+---@alias LibTameableDiet table<LibTameableFoodKind, true>
+---@alias LibTameableFoods table<number, LibTameableFoodKind>
+---@alias LibTameableDiets table<number, LibTameableDiet>
 ---@alias LibTameableRanks table<number, LibTameableRank>
 ---@alias LibTameableBeasts table<number, LibTameableBeast>
 
@@ -69,7 +72,9 @@
 ---@field clients table<number, string>
 ---@field foodKinds LibTameableFoodKinds
 ---@field foods table<number, LibTameableFoodKind>
----@field NewFoods fun(self: LibTameable, client: string, minor: number): table<number, LibTameableFoodKind>?
+---@field diets table<number, LibTameableDiet>
+---@field NewFoods fun(self: LibTameable, client: string, minor: number): LibTameableFoods?, LibTameableDiets?
+---@field CanEat fun(self: LibTameable, family: number, itemID: number): boolean?
 ---@field GetFoodKind fun(self: LibTameable, itemID: number): LibTameableFoodKind?
 ---@field HasFoodData fun(self: LibTameable): boolean
 ---@field families LibTameableFamilies

@@ -100,6 +100,14 @@ describe("LibTameable on Classic Era", function()
         assert.is_true(lib:HasFoodData())
     end)
 
+    it("says whether a family eats an item", function()
+        assert.is_true(lib:CanEat(lib.families.cat, TOUGH_JERKY))
+        assert.is_false(lib:CanEat(lib.families.wolf, DALARAN_SHARP), "wolves eat only meat")
+        assert.is_true(lib:CanEat(lib.families.bear, DALARAN_SHARP))
+        assert.is_false(lib:CanEat(lib.families.cat, HEARTHSTONE), "not food")
+        assert.is_nil(lib:CanEat(lib.families.dragonhawk, TOUGH_JERKY), "not a family on Classic Era")
+    end)
+
     it("every teacher is a known beast", function()
         for _, info in lib:IterateRanks() do
             for _, npc in ipairs(info.teachers) do
@@ -115,6 +123,7 @@ describe("LibTameable on other clients", function()
         assert.equal("tbc", lib:GetClient())
         assert.equal(lib.families.dragonhawk, lib:GetBeast(15649).family)
         assert.equal(lib.foodKinds.meat, lib:GetFoodKind(TOUGH_JERKY))
+        assert.is_true(lib:CanEat(lib.families.dragonhawk, TOUGH_JERKY))
     end)
 
     it("has WoW: Forever's data on WoW: Forever", function()
@@ -123,6 +132,7 @@ describe("LibTameable on other clients", function()
         assert.same({ COWER, 1, 5 }, { lib:GetRank(COWER) })
         assert.is_false(lib:HasFoodData(), "the client says what a pet eats (C_PetInfo.CanPetEatItem)")
         assert.is_nil(lib:GetFoodKind(TOUGH_JERKY))
+        assert.is_nil(lib:CanEat(lib.families.cat, TOUGH_JERKY))
     end)
 
     for _, project in ipairs({ "retail", "mists" }) do

@@ -75,6 +75,10 @@ lib.client = lib.clients[WOW_PROJECT_ID]
 -- and Burning Crusade; WoW: Forever has C_PetInfo.CanPetEatItem).
 ---@type table<number, LibTameableFoodKind>
 lib.foods = {}
+-- Per family the kinds of food it eats, as the client's CreatureFamily.PetFoodMask says (on the
+-- same clients).
+---@type table<number, table<LibTameableFoodKind, true>>
+lib.diets = {}
 
 ---@type table<number, LibTameableRank>
 lib.ranks = {}
@@ -101,14 +105,28 @@ function lib:NewData(client, minor)
     return self.ranks, self.beasts
 end
 
----A fresh table for a food data file to fill, on the same terms as NewData.
+---Fresh tables for a food data file to fill (each item's kind, each family's diet), on the same
+---terms as NewData.
 ---@param client string
 ---@param minor number
----@return table<number, LibTameableFoodKind>?
+---@return table<number, LibTameableFoodKind>? foods
+---@return table<number, table<LibTameableFoodKind, true>>? diets
 function lib:NewFoods(client, minor)
-    if client ~= self.client or minor ~= MINOR then return nil end
-    self.foods = {}
-    return self.foods
+    if client ~= self.client or minor ~= MINOR then return nil, nil end
+    self.foods, self.diets = {}, {}
+    return self.foods, self.diets
+end
+
+---Whether a pet family eats an item: false for one that is no pet food, nil where the library
+---cannot say (a family not on this client, a client without food data).
+---@param family number CreatureFamily ID
+---@param itemID number
+---@return boolean?
+function lib:CanEat(family, itemID)
+    local diet = self.diets[family]
+    if not diet then return nil end
+    local kind = self.foods[itemID]
+    return kind ~= nil and diet[kind] == true
 end
 
 ---The kind of pet food an item is (lib.foodKinds), nil for an item that is no pet food or on a
