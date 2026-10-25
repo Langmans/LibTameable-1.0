@@ -6,4 +6,6 @@
     <Script file="Data\Era.lua"/>
     <Script file="Data\TBC.lua"/>
     <Script file="Data\Forever.lua"/>
+    <Script file="Data\EraFood.lua"/>
+    <Script file="Data\TBCFood.lua"/>
 </Ui>

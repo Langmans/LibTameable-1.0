@@ -58,7 +58,23 @@ lib.families = {
     fox = 40,
 }
 
+---The kinds of pet food an item can be (a family eats some of them).
+lib.foodKinds = {
+    meat = "meat",
+    fish = "fish",
+    cheese = "cheese",
+    bread = "bread",
+    fungus = "fungus",
+    fruit = "fruit",
+    rawFish = "rawFish",
+}
+
 lib.client = lib.clients[WOW_PROJECT_ID]
+
+-- Each food item's kind, by item ID: only where the client cannot say what a pet eats (Classic Era
+-- and Burning Crusade; WoW: Forever has C_PetInfo.CanPetEatItem).
+---@type table<number, LibTameableFoodKind>
+lib.foods = {}
 
 ---@type table<number, LibTameableRank>
 lib.ranks = {}
@@ -83,6 +99,30 @@ function lib:NewData(client, minor)
     if client ~= self.client or minor ~= MINOR then return nil, nil end
     self.ranks, self.beasts, self.teaches, self.abilityRanks, self.byKind = {}, {}, nil, nil, {}
     return self.ranks, self.beasts
+end
+
+---A fresh table for a food data file to fill, on the same terms as NewData.
+---@param client string
+---@param minor number
+---@return table<number, LibTameableFoodKind>?
+function lib:NewFoods(client, minor)
+    if client ~= self.client or minor ~= MINOR then return nil end
+    self.foods = {}
+    return self.foods
+end
+
+---The kind of pet food an item is (lib.foodKinds), nil for an item that is no pet food or on a
+---client without food data (HasFoodData).
+---@param itemID number
+---@return LibTameableFoodKind?
+function lib:GetFoodKind(itemID)
+    return self.foods[itemID]
+end
+
+---Whether the library knows the food kinds on this client.
+---@return boolean
+function lib:HasFoodData()
+    return next(self.foods) ~= nil
 end
 
 ---The running client's name in the library ("era", "tbc", "forever"), nil on one it has no data

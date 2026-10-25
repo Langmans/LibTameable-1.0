@@ -4,6 +4,7 @@ local COWER, COWER_2, COWER_5, COWER_6 = 1742, 1753, 1756, 16697
 local BITE_2 = 17255
 local CLAW_5 = 16831
 local DRYWALLOW_SNAPPER, MOTHER_FANG, TIMBER, BARNABUS = 4343, 471, 1132, 2753
+local TOUGH_JERKY, DALARAN_SHARP, HEARTHSTONE = 117, 414, 6948
 
 describe("LibTameable on Classic Era", function()
     local client, lib
@@ -92,6 +93,13 @@ describe("LibTameable on Classic Era", function()
         assert.equal(302, beasts)
     end)
 
+    it("knows what kind of pet food an item is", function()
+        assert.equal(lib.foodKinds.meat, lib:GetFoodKind(TOUGH_JERKY))
+        assert.equal(lib.foodKinds.cheese, lib:GetFoodKind(DALARAN_SHARP))
+        assert.is_nil(lib:GetFoodKind(HEARTHSTONE), "not food")
+        assert.is_true(lib:HasFoodData())
+    end)
+
     it("every teacher is a known beast", function()
         for _, info in lib:IterateRanks() do
             for _, npc in ipairs(info.teachers) do
@@ -106,12 +114,15 @@ describe("LibTameable on other clients", function()
         local lib = NewClient("tbc").lib
         assert.equal("tbc", lib:GetClient())
         assert.equal(lib.families.dragonhawk, lib:GetBeast(15649).family)
+        assert.equal(lib.foodKinds.meat, lib:GetFoodKind(TOUGH_JERKY))
     end)
 
     it("has WoW: Forever's data on WoW: Forever", function()
         local lib = NewClient("forever").lib
         assert.equal("forever", lib:GetClient())
         assert.same({ COWER, 1, 5 }, { lib:GetRank(COWER) })
+        assert.is_false(lib:HasFoodData(), "the client says what a pet eats (C_PetInfo.CanPetEatItem)")
+        assert.is_nil(lib:GetFoodKind(TOUGH_JERKY))
     end)
 
     for _, project in ipairs({ "retail", "mists" }) do
@@ -137,7 +148,10 @@ describe("LibTameable's versions", function()
         local lib = NewClient("era").lib
         assert.is_nil(lib:NewData("tbc", 1))
         assert.is_nil(lib:NewData("era", 0), "an older copy's data file")
+        assert.is_nil(lib:NewFoods("tbc", 1))
+        assert.is_nil(lib:NewFoods("era", 0))
         assert.is_true(lib:HasData(), "refused data leaves the tables alone")
+        assert.is_true(lib:HasFoodData())
     end)
 
     it("starts afresh when its data is given again", function()

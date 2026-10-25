@@ -45,6 +45,13 @@ if Tameable:HasData() then
     for spellID, info in Tameable:IterateRanks() do end
     for npcID, beast in Tameable:IterateBeasts() do end
 end
+
+-- What kind of pet food an item is (Tameable.foodKinds: meat, fish, cheese, bread, fungus,
+-- fruit, rawFish), on Classic Era and Burning Crusade, which have no API for it. WoW: Forever
+-- has C_PetInfo.CanPetEatItem: HasFoodData() is false there.
+if Tameable:HasFoodData() then
+    local kind = Tameable:GetFoodKind(117) -- Tough Jerky: "meat"
+end
 ```
 
 Lists and tables the library returns are its own: read them, never change them.
@@ -55,6 +62,8 @@ Drywallow Snapper, a crocolisk, teaches Claw 5 to a hunter who trains it to a ca
 
 Include `lib.xml` after LibStub. It loads the library and every client's data
 file; only the running client's fills the tables, so the others cost no memory.
+An addon with a .toc per client can load less: `LibTameable-1.0.lua`, then only
+its client's `Data\<Client>.lua` (and `Data\<Client>Food.lua` for Era and TBC).
 When several addons embed the library, the newest copy (MINOR) wins and takes
 only data files of its own version.
 
@@ -70,6 +79,8 @@ only data files of its own version.
   pins through the client's map tables. Where CMaNGOS has no spawn for a beast,
   the [Tamed](https://github.com/moody/Tamed) addon's (MIT, `Data\Tamed-LICENSE.txt`)
   are used.
+- **Food kinds** (Classic Era, Burning Crusade): `item_template.FoodType` from
+  the same CMaNGOS databases.
 - **WoW: Forever.** From Wowhead's Forever database, with the teachers it does
   not link taken from comments on its spell pages and from Tamed.
 

@@ -2,6 +2,7 @@
 -- Types for LibTameable-1.0, for the language server only (not in the .toc).
 
 ---@alias LibTameableKind "all"|"rare"|"normal"
+---@alias LibTameableFoodKind "meat"|"fish"|"cheese"|"bread"|"fungus"|"fruit"|"rawFish"
 ---@alias LibTameableRanks table<number, LibTameableRank>
 ---@alias LibTameableBeasts table<number, LibTameableBeast>
 
@@ -55,8 +56,22 @@
 ---@field rare LibTameableKind
 ---@field normal LibTameableKind
 
+---@class LibTameableFoodKinds
+---@field meat LibTameableFoodKind
+---@field fish LibTameableFoodKind
+---@field cheese LibTameableFoodKind
+---@field bread LibTameableFoodKind
+---@field fungus LibTameableFoodKind
+---@field fruit LibTameableFoodKind
+---@field rawFish LibTameableFoodKind
+
 ---@class LibTameable
 ---@field clients table<number, string>
+---@field foodKinds LibTameableFoodKinds
+---@field foods table<number, LibTameableFoodKind>
+---@field NewFoods fun(self: LibTameable, client: string, minor: number): table<number, LibTameableFoodKind>?
+---@field GetFoodKind fun(self: LibTameable, itemID: number): LibTameableFoodKind?
+---@field HasFoodData fun(self: LibTameable): boolean
 ---@field families LibTameableFamilies
 ---@field kinds LibTameableKinds
 ---@field client string?
