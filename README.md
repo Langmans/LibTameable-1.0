@@ -105,4 +105,7 @@ lua tests/check.lua format   # format all Lua
 
 Releases: MINOR in `LibTameable-1.0.lua` goes up by one with every release and
 the tag is the same number; the data files carry the MINOR they were built for,
-so they are regenerated with each release.
+so they are regenerated with each release. Raise MINOR, regenerate, commit, then
+tag: CI fails on a tag that is not MINOR, and a spec on a data file built for
+another MINOR. Between releases MINOR stays: an addon embedding the library
+pins a commit, and every addon pins the same one while MINOR is unchanged.

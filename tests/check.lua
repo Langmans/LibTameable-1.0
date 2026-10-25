@@ -13,6 +13,9 @@
 package.path = "./?.lua;" .. package.path
 local sh = require("tests.sh")
 
+-- The file that declares the library's MINOR.
+local LIBRARY_FILE = "LibTameable-1.0.lua"
+
 local useColor = not os.getenv("NO_COLOR")
 local function paint(code)
     return function(text)
@@ -190,9 +193,19 @@ local function lint()
     report(coverage == 100, ("type coverage %s%%, must be 100%%"):format(tostring(coverage)))
 end
 
+---On a CI run for a tag (the Release workflow runs these checks first): the tag must be the
+---library's MINOR. Any other run has no tag to check.
+local function releaseTag()
+    if os.getenv("GITHUB_REF_TYPE") ~= "tag" then return end
+    local version = require("tests.version")
+    local ok, message = version.checkTag(os.getenv("GITHUB_REF_NAME") or "", version.minor(LIBRARY_FILE))
+    report(ok, message)
+end
+
 local command = arg[1] or "all"
 local extra = { select(2, unpack(arg)) }
 if command == "all" then
+    releaseTag()
     lint()
     test({})
 elseif command == "test" then

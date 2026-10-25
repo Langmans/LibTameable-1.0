@@ -1,4 +1,5 @@
-# Pushing a tag (the library's MINOR, e.g. 1) runs the CI checks, then builds the zip with BigWigsMods/packager
+# Pushing a tag (the library's MINOR, e.g. 1) runs the CI checks, which fail on a tag that is not
+# MINOR (tests/check.lua), then builds the zip with BigWigsMods/packager
 # (LibStub from the .pkgmeta externals), uploads it to CurseForge and attaches it to a GitHub
 # release. The CurseForge upload is skipped while the CF_API_KEY secret or the project ID in
 # LibTameable-1.0.toc is missing.
