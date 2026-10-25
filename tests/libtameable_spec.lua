@@ -108,6 +108,18 @@ describe("LibTameable on Classic Era", function()
         assert.is_nil(lib:CanEat(lib.families.dragonhawk, TOUGH_JERKY), "not a family on Classic Era")
     end)
 
+    it("gives each pin the radius of the area its spawns are in", function()
+        for npc, beast in lib:IterateBeasts() do
+            for map, flat in pairs(beast.pins or {}) do
+                local radii = beast.radii[map]
+                assert.equal(#flat / 2, #radii, npc .. " on " .. map)
+                for _, radius in ipairs(radii) do
+                    assert.is_true(radius >= 2 and radius < 20, npc .. ": " .. radius)
+                end
+            end
+        end
+    end)
+
     it("every teacher is a known beast", function()
         for _, info in lib:IterateRanks() do
             for _, npc in ipairs(info.teachers) do

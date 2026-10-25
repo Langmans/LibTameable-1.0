@@ -37,7 +37,8 @@ if Tameable:HasData() then
     -- What a beast teaches, and the beast itself: name, family, levels, rare/elite, where.
     local teaches = Tameable:GetTeaches(2753) -- Barnabus: { 17259 } (Bite 6)
     local beast = Tameable:GetBeast(2753)
-    -- beast.pins[uiMapID] = { x1, y1, x2, y2, ... } in percent; beast.zones = { areaID } in an instance
+    -- beast.pins[uiMapID] = { x1, y1, x2, y2, ... } in percent; beast.radii[uiMapID] = { r1, r2, ... },
+    -- each pin's area (the circle that holds its spawns), in percent; beast.zones = { areaID } in an instance
 
     -- Whether a family can learn a rank (Tameable.families.cat, ...).
     local can = Tameable:CanLearn(Tameable.families.crocolisk, 16831) -- Claw 5: false
