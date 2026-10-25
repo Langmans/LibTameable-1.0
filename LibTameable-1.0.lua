@@ -29,6 +29,8 @@ lib.clients = {
 }
 
 ---Hunter pet families by name, as CreatureFamily IDs (the game's UnitCreatureFamily numbering).
+---The ID is the same on every client, the name not always: 26 is the Owl on Classic Era and
+---Burning Crusade, the Bird of Prey on WoW: Forever. Show the client's own name.
 lib.families = {
     wolf = 1,
     cat = 2,
