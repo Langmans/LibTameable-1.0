@@ -120,6 +120,13 @@ describe("LibTameable on Classic Era", function()
         end
     end)
 
+    it("gives each beast its attack speed, which a tamed beast keeps on Classic Era", function()
+        assert.equal(1, lib:GetBeast(2850).speed, "Broken Tooth")
+        for npc, beast in lib:IterateBeasts() do
+            assert.is_true(beast.speed >= 1 and beast.speed <= 3, npc .. ": " .. tostring(beast.speed))
+        end
+    end)
+
     it("every teacher is a known beast", function()
         for _, info in lib:IterateRanks() do
             for _, npc in ipairs(info.teachers) do
@@ -136,6 +143,7 @@ describe("LibTameable on other clients", function()
         assert.equal(lib.families.dragonhawk, lib:GetBeast(15649).family)
         assert.equal(lib.foodKinds.meat, lib:GetFoodKind(TOUGH_JERKY))
         assert.is_true(lib:CanEat(lib.families.dragonhawk, TOUGH_JERKY))
+        assert.is_nil(lib:GetBeast(2850).speed, "every pet attacks at 2.0 there")
     end)
 
     it("has WoW: Forever's data on WoW: Forever", function()

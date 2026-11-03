@@ -26,6 +26,7 @@
 ---@field elite true?
 ---@field rare true?
 ---@field display number? its display ID (model), for PlayerModel:SetDisplayInfo, which needs no creature in the client's cache
+---@field speed number? its melee attack speed in seconds, Classic Era only: there a tamed beast keeps it (Burning Crusade gave every pet 2.0)
 ---@field pins table<number, number[]>? per uiMapID, pin positions as x1, y1, x2, y2, ... (percent)
 ---@field radii table<number, number[]>? per uiMapID, each pin's area: the radius (percent) around it that holds its spawns
 ---@field zones number[]? AreaTable IDs, for a beast in an instance (no map pins)

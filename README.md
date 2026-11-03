@@ -34,8 +34,9 @@ if Tameable:HasData() then
     local rares = Tameable:GetTeachers(17255, Tameable.kinds.rare)
     local noCamping = Tameable:GetTeachers(17255, Tameable.kinds.normal)
 
-    -- What a beast teaches, and the beast itself: name, family, levels, rare/elite, where, and its
-    -- display ID (beast.display) for a model that needs no creature in the client's cache.
+    -- What a beast teaches, and the beast itself: name, family, levels, rare/elite, where, its
+    -- display ID (beast.display) for a model that needs no creature in the client's cache, and on
+    -- Classic Era its attack speed in seconds (beast.speed): a tamed beast keeps it there.
     local teaches = Tameable:GetTeaches(2753) -- Barnabus: { 17259 } (Bite 6)
     local beast = Tameable:GetBeast(2753)
     -- beast.pins[uiMapID] = { x1, y1, x2, y2, ... } in percent; beast.radii[uiMapID] = { r1, r2, ... },
