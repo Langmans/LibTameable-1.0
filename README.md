@@ -36,7 +36,8 @@ if Tameable:HasData() then
 
     -- What a beast teaches, and the beast itself: name, family, levels, rare/elite, where, its
     -- display ID (beast.display) for a model that needs no creature in the client's cache, and on
-    -- Classic Era its attack speed in seconds (beast.speed): a tamed beast keeps it there.
+    -- Classic Era and WoW: Forever its attack speed in seconds (beast.speed): a tamed beast keeps it
+    -- there.
     local teaches = Tameable:GetTeaches(2753) -- Barnabus: { 17259 } (Bite 6)
     local beast = Tameable:GetBeast(2753)
     -- beast.pins[uiMapID] = { x1, y1, x2, y2, ... } in percent; beast.radii[uiMapID] = { r1, r2, ... },
@@ -87,7 +88,9 @@ only data files of its own version.
 - **Food kinds** (Classic Era, Burning Crusade): `item_template.FoodType` from
   the same CMaNGOS databases.
 - **WoW: Forever.** From Wowhead's Forever database, with the teachers it does
-  not link taken from comments on its spell pages and from Tamed.
+  not link taken from comments on its spell pages and from Tamed. The attack
+  speed of a beast with Classic's NPC ID is the CMaNGOS `classic-db`'s, as
+  Forever keeps it (Wowhead has none).
 
 The data files are generated; they are not edited by hand.
 

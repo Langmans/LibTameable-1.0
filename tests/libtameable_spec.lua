@@ -153,6 +153,7 @@ describe("LibTameable on other clients", function()
         assert.is_false(lib:HasFoodData(), "the client says what a pet eats (C_PetInfo.CanPetEatItem)")
         assert.is_nil(lib:GetFoodKind(TOUGH_JERKY))
         assert.is_nil(lib:CanEat(lib.families.cat, TOUGH_JERKY))
+        assert.equal(1, lib:GetBeast(2850).speed, "Broken Tooth keeps his 1.0 there too")
     end)
 
     for _, project in ipairs({ "retail", "mists" }) do
