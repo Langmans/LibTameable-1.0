@@ -176,7 +176,7 @@ B[1114] = { name = "Jungle Thunderer", minLevel = 37, maxLevel = 38, display = 8
 B[1125] = { name = "Crag Boar", minLevel = 5, maxLevel = 6, display = 607, speed = 2, family = F.boar, pins = { [1426] = { 34.8, 58.2, 43.5, 64, 45.3, 57.2, 48.7, 50.9, 50.8, 60.2 } }, radii = { [1426] = { 7.6, 8.6, 6, 5.2, 3.4 } } }
 B[1126] = { name = "Large Crag Boar", minLevel = 6, maxLevel = 7, display = 381, speed = 2, family = F.boar, pins = { [1426] = { 37.6, 51.1, 38.6, 46.7, 43, 33.1, 43.5, 40.6, 48.1, 46, 49.2, 61.2, 49, 55.1, 57.5, 51.6, 64.7, 52.4 } }, radii = { [1426] = { 7.1, 2, 6.4, 3.6, 5.1, 4.8, 4.8, 5.8, 5.1 } } }
 B[1127] = { name = "Elder Crag Boar", minLevel = 7, maxLevel = 8, display = 744, speed = 2, family = F.boar, pins = { [1426] = { 28.5, 43.1, 30, 51.3, 35.3, 34.6, 38.7, 48.4, 42.5, 30.5, 44.3, 41.2, 58.5, 57.6, 58.5, 50.6, 63.9, 60.5, 69.5, 51.7, 72.6, 61.3, 78, 47.2, 79.2, 57.2, 79.8, 43.3, 81.5, 35.6 } }, radii = { [1426] = { 7, 6.5, 5.9, 5.2, 3.9, 4.5, 6.7, 2.4, 2, 6.4, 3.6, 3.9, 2, 2, 2 } } }
-B[1129] = { name = "Black Bear", minLevel = 6, maxLevel = 7, display = 719, speed = 1.95, family = F.bear, pins = { [1437] = { 24.9, 78.1 } }, radii = { [1437] = { 2 } } }
+B[1129] = { name = "Black Bear", minLevel = 6, maxLevel = 7, display = 719, speed = 2.5, family = F.bear, pins = { [1437] = { 24.9, 78.1 } }, radii = { [1437] = { 2 } } }
 B[1130] = { name = "Bjarn", minLevel = 12, maxLevel = 12, rare = true, display = 913, speed = 2, family = F.bear, pins = { [1426] = { 56, 58.5, 62.6, 58.4 } }, radii = { [1426] = { 5, 2 } } }
 B[1131] = { name = "Winter Wolf", minLevel = 7, maxLevel = 8, display = 785, speed = 2, family = F.wolf, pins = { [1426] = { 34, 42.3, 46.9, 44.2, 51.4, 50.3 } }, radii = { [1426] = { 3, 6.8, 3.9 } } }
 B[1132] = { name = "Timber", minLevel = 10, maxLevel = 10, rare = true, display = 11422, speed = 2, family = F.wolf, pins = { [1426] = { 33.9, 42.7 } }, radii = { [1426] = { 2.6 } } }
@@ -189,7 +189,7 @@ B[1191] = { name = "Mangy Mountain Boar", minLevel = 14, maxLevel = 15, display 
 B[1192] = { name = "Elder Mountain Boar", minLevel = 16, maxLevel = 17, display = 1208, speed = 2, family = F.boar, pins = { [1432] = { 63.5, 38.7, 70.1, 37.8, 75.9, 45.3, 74.8, 50.7 } }, radii = { [1432] = { 7.3, 2, 4.9, 2 } } }
 B[1195] = { name = "Forest Lurker", minLevel = 10, maxLevel = 11, display = 827, speed = 2, family = F.spider, pins = { [1432] = { 19.3, 83.5, 21.1, 71.6, 30.3, 41.8, 29.4, 19.2, 31.4, 53.1, 29.1, 48, 34.1, 31.6, 38.6, 73.9 } }, radii = { [1432] = { 2, 2, 7.9, 5, 6.3, 2.7, 6.9, 3.2 } } }
 B[1196] = { name = "Ice Claw Bear", minLevel = 7, maxLevel = 8, display = 8840, speed = 2, family = F.bear, pins = { [1426] = { 27.3, 54.3, 28.8, 44.6, 30.5, 59.6, 34.2, 34.1, 36.8, 44.6, 37.7, 41.6, 42.5, 29, 48.1, 62.1, 50.3, 53.8, 53.7, 43.2, 61.5, 59.4, 59.3, 52, 66.5, 50.5, 77.4, 48.4 } }, radii = { [1426] = { 5, 5.9, 2, 6.6, 8.5, 2, 2.8, 4.9, 2, 4.1, 4.9, 2, 2, 4.2 } } }
-B[1199] = { name = "Juvenile Snow Leopard", minLevel = 5, maxLevel = 6, display = 748, speed = 2, family = F.cat, pins = { [1426] = { 40.9, 59.7 } }, radii = { [1426] = { 6.9 } } }
+B[1199] = { name = "Juvenile Snow Leopard", minLevel = 5, maxLevel = 6, display = 748, speed = 1.5, family = F.cat, pins = { [1426] = { 40.9, 59.7 } }, radii = { [1426] = { 6.9 } } }
 B[1216] = { name = "Shore Crawler", minLevel = 17, maxLevel = 18, display = 9570, speed = 2, family = F.crab, pins = { [1436] = { 25.7, 65.5, 29.9, 80.4, 36.3, 88.2 } }, radii = { [1436] = { 3.4, 4.6, 2 } } }
 B[1225] = { name = "Ol' Sooty", minLevel = 20, maxLevel = 20, elite = true, display = 706, speed = 2, family = F.bear, pins = { [1432] = { 37.9, 63.4 } }, radii = { [1432] = { 2 } } }
 B[1258] = { name = "Black Ravager Mastiff", minLevel = 25, maxLevel = 26, display = 9562, speed = 2, family = F.wolf, pins = { [1431] = { 50.8, 60.5, 65.5, 31.7, 69.5, 38.2 } }, radii = { [1431] = { 2, 6.1, 2 } } }
@@ -347,7 +347,7 @@ B[5268] = { name = "Ironfur Bear", minLevel = 41, maxLevel = 42, display = 3201,
 B[5274] = { name = "Ironfur Patriarch", minLevel = 48, maxLevel = 49, display = 3200, speed = 2, family = F.bear, pins = { [1444] = { 43.2, 22.6, 43.7, 11, 49.8, 31.7, 49.4, 29.8 } }, radii = { [1444] = { 7, 3, 7.3, 3 } } }
 B[5286] = { name = "Longtooth Runner", minLevel = 40, maxLevel = 41, display = 165, speed = 2, family = F.wolf, pins = { [1444] = { 28.8, 47.9, 30.7, 52.6, 70.7, 44, 68.8, 42.6, 77.6, 38.6, 83.4, 44.9, 86.8, 38.9 } }, radii = { [1444] = { 6, 2, 9.2, 2, 8.7, 6.5, 4.2 } } }
 B[5287] = { name = "Longtooth Howler", minLevel = 43, maxLevel = 44, display = 3202, speed = 2, family = F.wolf, pins = { [1444] = { 54, 48.1, 60.7, 50.9, 70.6, 60.3, 71.2, 51.7, 73.9, 54.3 } }, radii = { [1444] = { 5.7, 3.2, 5.7, 4.5, 2 } } }
-B[5291] = { name = "Hakkari Frostwing", minLevel = 49, maxLevel = 50, elite = true, display = 7569, speed = 1.25, zones = { 1417 }, family = F.windSerpent }
+B[5291] = { name = "Hakkari Frostwing", minLevel = 49, maxLevel = 50, elite = true, display = 7569, speed = 2, zones = { 1417 }, family = F.windSerpent }
 B[5307] = { name = "Vale Screecher", minLevel = 41, maxLevel = 43, display = 2699, speed = 2, family = F.windSerpent, pins = { [1444] = { 58.3, 58.5 } }, radii = { [1444] = { 5.6 } } }
 B[5308] = { name = "Rogue Vale Screecher", minLevel = 44, maxLevel = 46, display = 3204, speed = 2, family = F.windSerpent, pins = { [1444] = { 44.7, 37.6, 48.6, 48.7, 47.9, 57.5, 58.1, 49 } }, radii = { [1444] = { 5, 6.5, 3.3, 4.6 } } }
 B[5349] = { name = "Arash-ethis", minLevel = 49, maxLevel = 49, rare = true, display = 7569, speed = 2, family = F.windSerpent, pins = { [1444] = { 44.8, 25 } }, radii = { [1444] = { 2 } } }
@@ -363,14 +363,14 @@ B[5428] = { name = "Roc", minLevel = 41, maxLevel = 43, display = 3248, speed = 
 B[5429] = { name = "Fire Roc", minLevel = 43, maxLevel = 45, display = 7348, speed = 2, family = F.carrionBird, pins = { [1446] = { 44.4, 39.2, 37.7, 43.2, 47.9, 45.7, 51.2, 52.9, 56.9, 46.6 } }, radii = { [1446] = { 10.4, 2, 4.5, 5.8, 3.3 } } }
 B[5430] = { name = "Searing Roc", minLevel = 47, maxLevel = 49, display = 10827, speed = 2, family = F.carrionBird, pins = { [1446] = { 31.8, 58.9, 31.9, 61.1, 32, 74.9, 39.4, 66.1, 39.6, 63.9 } }, radii = { [1446] = { 5.9, 2, 2, 6.7, 2 } } }
 B[5432] = { name = "Giant Surf Glider", minLevel = 48, maxLevel = 50, elite = true, display = 5127, speed = 2, family = F.turtle, pins = { [1446] = { 50.7, 90.3, 54.8, 94.4, 59.9, 85.6 } }, radii = { [1446] = { 6.5, 5.9, 5.8 } } }
-B[5708] = { name = "Spawn of Hakkar", minLevel = 51, maxLevel = 51, elite = true, display = 4065, speed = 1.225, zones = { 1417 }, family = F.windSerpent }
+B[5708] = { name = "Spawn of Hakkar", minLevel = 51, maxLevel = 51, elite = true, display = 4065, speed = 2, zones = { 1417 }, family = F.windSerpent }
 B[5756] = { name = "Deviate Venomwing", minLevel = 20, maxLevel = 21, elite = true, display = 2706, speed = 2, zones = { 718 }, family = F.windSerpent }
 B[5766] = { name = "Savannah Cub", minLevel = 4, maxLevel = 5, display = 2278, speed = 1.2, family = F.cat, pins = { [1411] = { 31.3, 68.5 } }, radii = { [1411] = { 5.5 } } }
 B[5823] = { name = "Death Flayer", minLevel = 11, maxLevel = 11, rare = true, display = 2491, speed = 1.6, family = F.scorpid, pins = { [1411] = { 36.5, 49.7 } }, radii = { [1411] = { 2 } } }
 B[5937] = { name = "Vile Sting", minLevel = 35, maxLevel = 35, elite = true, rare = true, display = 10988, speed = 2, family = F.scorpid, pins = { [1441] = { 70.6, 72.9 } }, radii = { [1441] = { 2 } } }
 B[5988] = { name = "Scorpok Stinger", minLevel = 50, maxLevel = 51, display = 6068, speed = 2, family = F.scorpid, pins = { [1419] = { 46.5, 22.7, 46.5, 17.5, 51.3, 29.1, 59.4, 43.7, 60, 36.6 } }, radii = { [1419] = { 8.5, 5, 2.9, 4.2, 2.9 } } }
 B[5992] = { name = "Ashmane Boar", minLevel = 48, maxLevel = 49, display = 3026, speed = 2, family = F.boar, pins = { [1419] = { 58.8, 29.9 } }, radii = { [1419] = { 6.7 } } }
-B[6013] = { name = "Wayward Buzzard", minLevel = 35, maxLevel = 37, display = 1105, speed = 1.66, family = F.carrionBird, pins = { [1418] = { 44, 52.8 } }, radii = { [1418] = { 5.7 } } }
+B[6013] = { name = "Wayward Buzzard", minLevel = 35, maxLevel = 37, display = 1105, speed = 2, family = F.carrionBird, pins = { [1418] = { 44, 52.8 } }, radii = { [1418] = { 5.7 } } }
 B[6516] = { name = "Un'Goro Thunderer", minLevel = 52, maxLevel = 53, display = 5244, speed = 2, family = F.gorilla, pins = { [1449] = { 66.1, 16.1 } }, radii = { [1449] = { 7.2 } } }
 B[6585] = { name = "Uhk'loc", minLevel = 52, maxLevel = 53, rare = true, display = 8129, speed = 2, family = F.gorilla, pins = { [1449] = { 68.5, 12.7 } }, radii = { [1449] = { 2 } } }
 B[6788] = { name = "Den Mother", minLevel = 18, maxLevel = 19, display = 1007, speed = 2, family = F.bear, pins = { [1439] = { 51.5, 38.3 } }, radii = { [1439] = { 2 } } }
@@ -389,7 +389,7 @@ B[7444] = { name = "Shardtooth Bear", minLevel = 53, maxLevel = 54, display = 86
 B[7445] = { name = "Elder Shardtooth", minLevel = 57, maxLevel = 58, display = 8837, speed = 2, family = F.bear, pins = { [1452] = { 58.8, 21.5, 59.2, 14.1, 60.1, 61, 62.1, 27.5, 63.1, 55 } }, radii = { [1452] = { 6.9, 3.6, 4.5, 3.5, 2 } } }
 B[7455] = { name = "Winterspring Owl", minLevel = 54, maxLevel = 56, display = 6212, speed = 2, family = F.birdOfPrey, pins = { [1452] = { 58.4, 32.4, 59.7, 45.1, 57.7, 38.8, 65.5, 29.4, 64.2, 36.8, 67, 51.8 } }, radii = { [1452] = { 9.2, 6.5, 2.8, 5.1, 2, 4.1 } } }
 B[7456] = { name = "Winterspring Screecher", minLevel = 57, maxLevel = 59, display = 10833, speed = 2, family = F.birdOfPrey, pins = { [1452] = { 58.3, 22.6, 59, 14.6, 60.8, 59.2, 62.4, 53, 62.5, 27.9 } }, radii = { [1452] = { 5.9, 4.6, 7, 2, 2 } } }
-B[7803] = { name = "Scorpid Duneburrower", minLevel = 46, maxLevel = 47, display = 2414, speed = 1.52, family = F.scorpid, pins = { [1446] = { 61.2, 53.8 } }, radii = { [1446] = { 2 } } }
+B[7803] = { name = "Scorpid Duneburrower", minLevel = 46, maxLevel = 47, display = 2414, speed = 2, family = F.scorpid, pins = { [1446] = { 61.2, 53.8 } }, radii = { [1446] = { 2 } } }
 B[8207] = { name = "Greater Firebird", minLevel = 46, maxLevel = 46, rare = true, display = 7349, speed = 2, family = F.carrionBird, pins = { [1446] = { 49.4, 36 } }, radii = { [1446] = { 2 } } }
 B[8208] = { name = "Murderous Blisterpaw", minLevel = 43, maxLevel = 43, rare = true, display = 1534, speed = 2, family = F.hyena, pins = { [1446] = { 56.3, 36 } }, radii = { [1446] = { 2 } } }
 B[8211] = { name = "Old Cliff Jumper", minLevel = 42, maxLevel = 42, rare = true, display = 11414, speed = 2, family = F.wolf, pins = { [1425] = { 11.9, 53.7 } }, radii = { [1425] = { 2 } } }
@@ -399,7 +399,7 @@ B[8299] = { name = "Spiteflayer", minLevel = 52, maxLevel = 52, rare = true, dis
 B[8300] = { name = "Ravage", minLevel = 51, maxLevel = 51, rare = true, display = 10904, speed = 1.3, family = F.hyena, pins = { [1419] = { 47.3, 36.3, 60.5, 36.6 } }, radii = { [1419] = { 4.4, 3.9 } } }
 B[8301] = { name = "Clack the Reaver", minLevel = 53, maxLevel = 53, rare = true, display = 10983, speed = 2, family = F.scorpid, pins = { [1419] = { 45.7, 42.8 } }, radii = { [1419] = { 2 } } }
 B[8303] = { name = "Grunter", minLevel = 50, maxLevel = 50, rare = true, display = 8870, speed = 2, family = F.boar, pins = { [1419] = { 57.1, 29.2, 62.8, 27.4 } }, radii = { [1419] = { 7, 2.4 } } }
-B[8336] = { name = "Hakkari Sapper", minLevel = 49, maxLevel = 50, elite = true, display = 1336, speed = 1.25, zones = { 1417 }, family = F.windSerpent }
+B[8336] = { name = "Hakkari Sapper", minLevel = 49, maxLevel = 50, elite = true, display = 1336, speed = 2, zones = { 1417 }, family = F.windSerpent }
 B[8600] = { name = "Plaguebat", minLevel = 53, maxLevel = 55, display = 7894, speed = 2, family = F.bat, pins = { [1423] = { 17.3, 78, 19.2, 67.2, 28, 65.7, 25.6, 91, 24.7, 85.2, 32.6, 70.7, 33.8, 83.9, 34.2, 75.9, 43.7, 69.5, 43.6, 84.6, 43.2, 76, 54.1, 78.4, 62.1, 86.2, 67.1, 78.4, 73, 83.8 } }, radii = { [1423] = { 5.6, 6.5, 8.7, 4, 2, 6.3, 5.2, 2.5, 6.3, 6, 3.1, 5.9, 4.3, 3.8, 2.5 } } }
 B[8601] = { name = "Noxious Plaguebat", minLevel = 54, maxLevel = 56, display = 7896, speed = 2, family = F.bat, pins = { [1423] = { 48.8, 63.2, 54.4, 52.9, 60.3, 59.3, 67.7, 63.9, 71, 56.7, 70.4, 72.1, 75, 60.8, 79.5, 71.4 } }, radii = { [1423] = { 7.5, 6, 6.4, 7.3, 5.8, 3.4, 3.1, 3 } } }
 B[8602] = { name = "Monstrous Plaguebat", minLevel = 56, maxLevel = 58, display = 7897, speed = 2, family = F.bat, pins = { [1423] = { 19.7, 23.8, 20.7, 36.9, 31.9, 40.9, 49.1, 39.5, 50.7, 25.8, 53.8, 43.6, 56.5, 20.8, 61, 31.4, 62.5, 46.7, 62.2, 38.2, 65, 27.8, 67.7, 50.9, 68.8, 36.3, 71.6, 43.3, 75.4, 33.8 } }, radii = { [1423] = { 5.7, 3.1, 4.8, 8.1, 5.5, 3.7, 2.7, 7, 5.3, 2, 4, 2, 4.4, 2, 3.5 } } }
@@ -407,11 +407,11 @@ B[8762] = { name = "Timberweb Recluse", minLevel = 47, maxLevel = 48, display = 
 B[8958] = { name = "Angerclaw Mauler", minLevel = 49, maxLevel = 50, display = 1083, speed = 2, family = F.bear, pins = { [1448] = { 38.3, 44.1, 39.9, 55.4, 39.7, 31.5, 41.4, 24, 43.8, 64.6, 46.8, 17.4, 48.5, 37.2 } }, radii = { [1448] = { 3.7, 5.3, 2.9, 2, 4.4, 4.6, 2.9 } } }
 B[8959] = { name = "Felpaw Wolf", minLevel = 47, maxLevel = 48, display = 4124, speed = 2, family = F.wolf, pins = { [1448] = { 39, 74.8, 46.2, 80.9, 53, 85.2, 55.2, 91.3 } }, radii = { [1448] = { 4.8, 6.8, 6.1, 3.1 } } }
 B[8961] = { name = "Felpaw Ravager", minLevel = 51, maxLevel = 52, display = 9280, speed = 2, family = F.wolf, pins = { [1448] = { 54.1, 27.2, 56.2, 12.9, 59.9, 19.8 } }, radii = { [1448] = { 3, 6.1, 6.4 } } }
-B[9416] = { name = "Scarshield Worg", minLevel = 53, maxLevel = 54, display = 11420, speed = 2, zones = { 1583 }, family = F.wolf }
+B[9416] = { name = "Scarshield Worg", minLevel = 53, maxLevel = 54, display = 11420, speed = 1.5, zones = { 1583 }, family = F.wolf }
 B[9622] = { name = "U'cha", minLevel = 55, maxLevel = 55, display = 8844, speed = 2, family = F.gorilla, pins = { [1449] = { 68.1, 12.6 } }, radii = { [1449] = { 2 } } }
 B[9691] = { name = "Venomtip Scorpid", minLevel = 52, maxLevel = 53, display = 8970, speed = 2, family = F.scorpid, pins = { [1428] = { 84.7, 22.7, 89.1, 31, 87.7, 57.6, 90.4, 44.9, 92.5, 37 } }, radii = { [1428] = { 2, 4.5, 4.4, 3.1, 2 } } }
 B[9695] = { name = "Deathlash Scorpid", minLevel = 54, maxLevel = 55, display = 10984, speed = 2, family = F.scorpid, pins = { [1428] = { 48.9, 28.7, 54.7, 66.4, 57.2, 26.6, 63.2, 58.1, 73.2, 27.5, 71, 45.2, 73.3, 64.8 } }, radii = { [1428] = { 2.5, 2.3, 2, 4.8, 4.3, 2, 2 } } }
-B[9696] = { name = "Bloodaxe Worg", minLevel = 56, maxLevel = 57, display = 9562, speed = 1.8, zones = { 1583 }, family = F.wolf }
+B[9696] = { name = "Bloodaxe Worg", minLevel = 56, maxLevel = 57, display = 9562, speed = 1.5, zones = { 1583 }, family = F.wolf }
 B[9698] = { name = "Firetail Scorpid", minLevel = 56, maxLevel = 57, display = 10985, speed = 2, family = F.scorpid, pins = { [1428] = { 28.8, 57.3 } }, radii = { [1428] = { 6.4 } } }
 B[10200] = { name = "Rak'shiri", minLevel = 57, maxLevel = 57, rare = true, display = 10054, speed = 1.5, family = F.cat, pins = { [1452] = { 51.1, 10.8 } }, radii = { [1452] = { 2 } } }
 B[10644] = { name = "Mist Howler", minLevel = 22, maxLevel = 22, rare = true, display = 165, speed = 1.3, family = F.wolf, pins = { [1440] = { 20.9, 36.9, 26.8, 18.4 } }, radii = { [1440] = { 2, 2 } } }
@@ -452,7 +452,8 @@ S[822] = 2.5 -- Young Forest Bear
 S[976] = 1.3 -- Kurzen War Tiger
 S[977] = 1.3 -- Kurzen War Panther
 S[1085] = 1.3 -- Elder Stranglethorn Tiger
-S[1129] = 1.95 -- Black Bear
+S[1129] = 2.5 -- Black Bear
+S[1199] = 1.5 -- Juvenile Snow Leopard
 S[1713] = 1.5 -- Elder Shadowmaw Panther
 S[1922] = 1.7 -- Gray Forest Wolf
 S[2033] = 1.4 -- Elder Nightsaber
@@ -464,6 +465,7 @@ S[2070] = 1.3 -- Moonstalker Runt
 S[2071] = 1.3 -- Moonstalker Matriarch
 S[2175] = 1.5 -- Shadowclaw
 S[2237] = 1.3 -- Moonstalker Sire
+S[2275] = 1.3 -- Enraged Stanley
 S[2384] = 1.2 -- Starving Mountain Lion
 S[2385] = 1.2 -- Feral Mountain Lion
 S[2406] = 1.4 -- Mountain Lion
@@ -489,8 +491,7 @@ S[4124] = 1.2 -- Needles Cougar
 S[4126] = 1.6 -- Crag Stalker
 S[4250] = 1.5 -- Galak Packhound
 S[4304] = 1.5 -- Scarlet Tracking Hound
-S[5291] = 1.25 -- Hakkari Frostwing
-S[5708] = 1.225 -- Spawn of Hakkar
+S[4534] = 1.2 -- Tamed Hyena
 S[5766] = 1.2 -- Savannah Cub
 S[5807] = 1.2 -- The Rake
 S[5823] = 1.6 -- Death Flayer
@@ -503,14 +504,19 @@ S[7433] = 1.5 -- Frostsaber Huntress
 S[7434] = 1.5 -- Frostsaber Pride Watcher
 S[8299] = 1.2 -- Spiteflayer
 S[8300] = 1.3 -- Ravage
-S[8336] = 1.25 -- Hakkari Sapper
-S[9696] = 1.8 -- Bloodaxe Worg
+S[9416] = 1.5 -- Scarshield Worg
+S[9696] = 1.5 -- Bloodaxe Worg
 S[10077] = 1.2 -- Deathmaw
 S[10200] = 1.5 -- Rak'shiri
 S[10375] = 1.5 -- Spire Spiderling
+S[10581] = 1.508 -- Young Arikara
 S[10644] = 1.3 -- Mist Howler
+S[10737] = 1.5 -- Shy-Rotam
 S[10806] = 2.4 -- Ursius
 S[11368] = 1 -- Bloodseeker Bat
 S[11370] = 2.7 -- Razzashi Broodwidow
 S[14222] = 1.4 -- Araga
 S[14430] = 1.4 -- Duskstalker
+S[14965] = 1 -- Frenzied Bloodseeker Bat
+S[15041] = 1.4 -- Spawn of Mar'li
+S[15101] = 1.6 -- Zulian Prowler

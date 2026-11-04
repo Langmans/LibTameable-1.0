@@ -10,7 +10,9 @@
   CMaNGOS' MeleeBaseAttackTime; on Forever for the beasts with Classic's NPC
   ID): a tamed beast keeps it on those clients.
 - GetAttackSpeed: also for a tameable beast that teaches nothing, on Classic Era
-  (79 beasts whose speed is not 2.0, such as the Mangy Wolf's 1.7).
+  (85 beasts whose speed is not 2.0, such as the Mangy Wolf's 1.7), summoned
+  ones too. Petopia's speeds, measured on tamed pets, go before CMaNGOS' (the
+  wild beast's): Black Bear 2.5, Bloodaxe Worg 1.5.
 - GetFoodKind and HasFoodData: each item's kind of pet food on Classic Era and
   Burning Crusade; CanEat: whether a family eats an item, by the client's own
   diets.

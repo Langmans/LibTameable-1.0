@@ -89,6 +89,9 @@ only data files of its own version.
   pins through the client's map tables. Where CMaNGOS has no spawn for a beast,
   the [Tamed](https://github.com/moody/Tamed) addon's (MIT, `Data\Tamed-LICENSE.txt`)
   are used.
+- **Attack speeds** (Classic Era): [Petopia](https://www.wow-petopia.com/classic/attackspeed.php)'s
+  list, measured on tamed pets, where it has the beast; CMaNGOS' `MeleeBaseAttackTime`
+  (the beast's in the wild) for the few it lacks.
 - **Food kinds** (Classic Era, Burning Crusade): `item_template.FoodType` from
   the same CMaNGOS databases.
 - **WoW: Forever.** From Wowhead's Forever database, with the teachers it does
