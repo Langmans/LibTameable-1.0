@@ -43,6 +43,10 @@ if Tameable:HasData() then
     -- beast.pins[uiMapID] = { x1, y1, x2, y2, ... } in percent; beast.radii[uiMapID] = { r1, r2, ... },
     -- each pin's area (the circle that holds its spawns), in percent; beast.zones = { areaID } in an instance
 
+    -- Any tameable beast's attack speed, teaching or not (Mangy Wolf 525: 1.7), on Classic Era;
+    -- on WoW: Forever a teacher's. Nil for the usual 2.0 and for anything else.
+    local speed = Tameable:GetAttackSpeed(525)
+
     -- Whether a family can learn a rank (Tameable.families.cat, ...).
     local can = Tameable:CanLearn(Tameable.families.crocolisk, 16831) -- Claw 5: false
 

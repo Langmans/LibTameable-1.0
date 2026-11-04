@@ -9,6 +9,8 @@
 - Each beast's attack speed on Classic Era and WoW: Forever (beast.speed, from
   CMaNGOS' MeleeBaseAttackTime; on Forever for the beasts with Classic's NPC
   ID): a tamed beast keeps it on those clients.
+- GetAttackSpeed: also for a tameable beast that teaches nothing, on Classic Era
+  (79 beasts whose speed is not 2.0, such as the Mangy Wolf's 1.7).
 - GetFoodKind and HasFoodData: each item's kind of pet food on Classic Era and
   Burning Crusade; CanEat: whether a family eats an item, by the client's own
   diets.

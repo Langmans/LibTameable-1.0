@@ -88,7 +88,9 @@
 ---@field teaches table<number, number[]>?
 ---@field abilityRanks table<number, number[]>?
 ---@field byKind table<string, table<number, number[]>>
----@field NewData fun(self: LibTameable, client: string, minor: number): LibTameableRanks?, LibTameableBeasts?
+---@field speeds table<number, number>
+---@field NewData fun(self: LibTameable, client: string, minor: number): LibTameableRanks?, LibTameableBeasts?, table<number, number>?
+---@field GetAttackSpeed fun(self: LibTameable, npcID: number): number?
 ---@field GetClient fun(self: LibTameable): string?
 ---@field HasData fun(self: LibTameable): boolean
 ---@field GetRank fun(self: LibTameable, spellID: number): number?, number?, number?

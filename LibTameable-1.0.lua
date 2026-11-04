@@ -84,6 +84,10 @@ lib.diets = {}
 lib.ranks = {}
 ---@type table<number, LibTameableBeast>
 lib.beasts = {}
+-- The melee attack speed of every tameable beast, teaching or not, by NPC ID, where it is not the
+-- usual 2.0: on the clients where a tamed beast keeps it (Classic Era).
+---@type table<number, number>
+lib.speeds = {}
 -- Built on first use from the data: per NPC its ranks, per ability its ranks in order, per kind of
 -- teacher (rare or normal) each rank's teachers of that kind.
 ---@type table<number, number[]>?
@@ -99,10 +103,11 @@ lib.byKind = {}
 ---@param minor number
 ---@return table<number, LibTameableRank>? ranks
 ---@return table<number, LibTameableBeast>? beasts
+---@return table<number, number>? speeds every tameable beast's attack speed, where not 2.0
 function lib:NewData(client, minor)
-    if client ~= self.client or minor ~= MINOR then return nil, nil end
-    self.ranks, self.beasts, self.teaches, self.abilityRanks, self.byKind = {}, {}, nil, nil, {}
-    return self.ranks, self.beasts
+    if client ~= self.client or minor ~= MINOR then return nil, nil, nil end
+    self.ranks, self.beasts, self.speeds, self.teaches, self.abilityRanks, self.byKind = {}, {}, {}, nil, nil, {}
+    return self.ranks, self.beasts, self.speeds
 end
 
 ---Fresh tables for a food data file to fill (each item's kind, each family's diet), on the same
@@ -274,6 +279,16 @@ end
 ---@return LibTameableBeast?
 function lib:GetBeast(npcID)
     return self.beasts[npcID]
+end
+
+---A tameable beast's melee attack speed in seconds, which a tamed beast keeps on Classic Era and
+---WoW: Forever: also for a beast that teaches nothing. Nil for the usual 2.0, for a creature
+---that is not tameable, and on Burning Crusade, which gives every pet 2.0.
+---@param npcID number
+---@return number?
+function lib:GetAttackSpeed(npcID)
+    local beast = self.beasts[npcID]
+    return self.speeds[npcID] or beast and beast.speed ~= 2 and beast.speed or nil
 end
 
 ---Every rank, by spell ID (pairs order).

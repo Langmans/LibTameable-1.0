@@ -127,6 +127,16 @@ describe("LibTameable on Classic Era", function()
         end
     end)
 
+    it("gives the attack speed of every tameable beast, teaching or not, where it is not 2.0", function()
+        assert.equal(1.7, lib:GetAttackSpeed(525), "Mangy Wolf teaches nothing")
+        assert.equal(1, lib:GetAttackSpeed(2850), "Broken Tooth, a teacher")
+        assert.is_nil(lib:GetAttackSpeed(3099), "Dire Mottled Boar: the usual 2.0")
+        assert.is_nil(lib:GetAttackSpeed(1), "not a beast")
+        for npc, speed in pairs(lib.speeds) do
+            assert.is_true(speed >= 1 and speed <= 3 and speed ~= 2, npc .. ": " .. speed)
+        end
+    end)
+
     it("every teacher is a known beast", function()
         for _, info in lib:IterateRanks() do
             for _, npc in ipairs(info.teachers) do
@@ -144,6 +154,7 @@ describe("LibTameable on other clients", function()
         assert.equal(lib.foodKinds.meat, lib:GetFoodKind(TOUGH_JERKY))
         assert.is_true(lib:CanEat(lib.families.dragonhawk, TOUGH_JERKY))
         assert.is_nil(lib:GetBeast(2850).speed, "every pet attacks at 2.0 there")
+        assert.is_nil(lib:GetAttackSpeed(2850))
     end)
 
     it("has WoW: Forever's data on WoW: Forever", function()
@@ -154,6 +165,7 @@ describe("LibTameable on other clients", function()
         assert.is_nil(lib:GetFoodKind(TOUGH_JERKY))
         assert.is_nil(lib:CanEat(lib.families.cat, TOUGH_JERKY))
         assert.equal(1, lib:GetBeast(2850).speed, "Broken Tooth keeps his 1.0 there too")
+        assert.equal(1, lib:GetAttackSpeed(2850), "a teacher's speed, from its beast")
     end)
 
     for _, project in ipairs({ "retail", "mists" }) do

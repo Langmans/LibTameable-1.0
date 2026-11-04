@@ -7,8 +7,8 @@
 
 ---@type LibTameable
 local lib = LibStub("LibTameable-1.0")
-local R, B = lib:NewData("tbc", 1)
-if not R or not B then return end
+local R, B, S = lib:NewData("tbc", 1)
+if not R or not B or not S then return end
 -- Pet families by name: F.cat is 2.
 local F = lib.families
 

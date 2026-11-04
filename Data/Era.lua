@@ -7,8 +7,8 @@
 
 ---@type LibTameable
 local lib = LibStub("LibTameable-1.0")
-local R, B = lib:NewData("era", 1)
-if not R or not B then return end
+local R, B, S = lib:NewData("era", 1)
+if not R or not B or not S then return end
 -- Pet families by name: F.cat is 2.
 local F = lib.families
 
@@ -433,3 +433,84 @@ B[14344] = { name = "Mongress", minLevel = 50, maxLevel = 50, rare = true, displ
 B[14476] = { name = "Krellack", minLevel = 56, maxLevel = 56, rare = true, display = 6068, speed = 2, family = F.scorpid, pins = { [1451] = { 63.2, 16.7 } }, radii = { [1451] = { 2 } } }
 B[15067] = { name = "Zulian Stalker", minLevel = 61, maxLevel = 61, elite = true, display = 14572, speed = 2, zones = { 1977 }, family = F.cat }
 B[16117] = { name = "Plagued Swine", minLevel = 60, maxLevel = 60, display = 6121, speed = 2, family = F.boar, pins = { [1423] = { 16.7, 32.8 } }, radii = { [1423] = { 4.8 } } }
+
+-- Every tameable beast's attack speed in seconds, where it is not 2.0.
+S[118] = 1.5 -- Prowler
+S[525] = 1.7 -- Mangy Wolf
+S[681] = 1.3 -- Young Stranglethorn Tiger
+S[682] = 1.3 -- Stranglethorn Tiger
+S[683] = 1.3 -- Young Panther
+S[684] = 1.5 -- Shadowmaw Panther
+S[728] = 1.5 -- Bhag'thera
+S[729] = 1.3 -- Sin'Dall
+S[731] = 1.4 -- King Bangalash
+S[736] = 1.3 -- Panther
+S[767] = 1.2 -- Swamp Jaguar
+S[768] = 1.6 -- Shadow Panther
+S[772] = 1.3 -- Stranglethorn Tigress
+S[822] = 2.5 -- Young Forest Bear
+S[976] = 1.3 -- Kurzen War Tiger
+S[977] = 1.3 -- Kurzen War Panther
+S[1085] = 1.3 -- Elder Stranglethorn Tiger
+S[1129] = 1.95 -- Black Bear
+S[1713] = 1.5 -- Elder Shadowmaw Panther
+S[1922] = 1.7 -- Gray Forest Wolf
+S[2033] = 1.4 -- Elder Nightsaber
+S[2034] = 1.5 -- Feral Nightsaber
+S[2042] = 1.4 -- Nightsaber
+S[2043] = 1.4 -- Nightsaber Stalker
+S[2069] = 1.3 -- Moonstalker
+S[2070] = 1.3 -- Moonstalker Runt
+S[2071] = 1.3 -- Moonstalker Matriarch
+S[2175] = 1.5 -- Shadowclaw
+S[2237] = 1.3 -- Moonstalker Sire
+S[2384] = 1.2 -- Starving Mountain Lion
+S[2385] = 1.2 -- Feral Mountain Lion
+S[2406] = 1.4 -- Mountain Lion
+S[2407] = 1.4 -- Hulking Mountain Lion
+S[2681] = 1.7 -- Vilebranch Raiding Wolf
+S[2731] = 1.3 -- Ridge Stalker
+S[2734] = 1.3 -- Ridge Stalker Patriarch
+S[2850] = 1 -- Broken Tooth
+S[2958] = 1.5 -- Prairie Wolf
+S[2959] = 1.5 -- Prairie Stalker
+S[2960] = 1.4 -- Prairie Wolf Alpha
+S[3121] = 1.3 -- Durotar Tiger
+S[3241] = 1.3 -- Savannah Patriarch
+S[3243] = 1.5 -- Savannah Highmane
+S[3245] = 1.3 -- Ornery Plainstrider
+S[3415] = 1.5 -- Savannah Huntress
+S[3416] = 1.7 -- Savannah Matriarch
+S[3425] = 1.4 -- Savannah Prowler
+S[3825] = 1.3 -- Ghostpaw Alpha
+S[3862] = 1.2 -- Slavering Worg
+S[4067] = 1.3 -- Twilight Runner
+S[4124] = 1.2 -- Needles Cougar
+S[4126] = 1.6 -- Crag Stalker
+S[4250] = 1.5 -- Galak Packhound
+S[4304] = 1.5 -- Scarlet Tracking Hound
+S[5291] = 1.25 -- Hakkari Frostwing
+S[5708] = 1.225 -- Spawn of Hakkar
+S[5766] = 1.2 -- Savannah Cub
+S[5807] = 1.2 -- The Rake
+S[5823] = 1.6 -- Death Flayer
+S[5828] = 1.3 -- Humar the Pridelord
+S[5865] = 1.5 -- Dishu
+S[7430] = 1.5 -- Frostsaber Cub
+S[7431] = 1.5 -- Frostsaber
+S[7432] = 1.5 -- Frostsaber Stalker
+S[7433] = 1.5 -- Frostsaber Huntress
+S[7434] = 1.5 -- Frostsaber Pride Watcher
+S[8299] = 1.2 -- Spiteflayer
+S[8300] = 1.3 -- Ravage
+S[8336] = 1.25 -- Hakkari Sapper
+S[9696] = 1.8 -- Bloodaxe Worg
+S[10077] = 1.2 -- Deathmaw
+S[10200] = 1.5 -- Rak'shiri
+S[10375] = 1.5 -- Spire Spiderling
+S[10644] = 1.3 -- Mist Howler
+S[10806] = 2.4 -- Ursius
+S[11368] = 1 -- Bloodseeker Bat
+S[11370] = 2.7 -- Razzashi Broodwidow
+S[14222] = 1.4 -- Araga
+S[14430] = 1.4 -- Duskstalker
