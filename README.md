@@ -12,7 +12,7 @@ beasts they tame (Beast Training, removed in patch 3.0.2):
 |---|---|---|
 | Classic Era (Season of Discovery, Hardcore) | 59 | 302 |
 | Burning Crusade Classic | 97 | 357 |
-| WoW: Forever | 106 | 409 |
+| WoW: Forever | 106 | 236 |
 
 On any other client (Wrath and later, where pets learn by themselves) the
 library loads but has no data: `HasData()` is false.
@@ -94,10 +94,10 @@ only data files of its own version.
   (the beast's in the wild) for the few it lacks.
 - **Food kinds** (Classic Era, Burning Crusade): `item_template.FoodType` from
   the same CMaNGOS databases.
-- **WoW: Forever.** From Wowhead's Forever database, with the teachers it does
-  not link taken from comments on its spell pages and from Tamed. The attack
-  speed of a beast with Classic's NPC ID is the CMaNGOS `classic-db`'s, as
-  Forever keeps it (Wowhead has none).
+- **WoW: Forever.** From Wowhead's [Forever hunter pets](https://www.wowhead.com/forever/hunter-pets)
+  tool: every tameable beast, Forever's new ones too, with what it teaches ("Known when tamed"),
+  its attack speed (a tamed beast keeps it, as its Faster or Slower Attack) and levels; spawn
+  points from each beast's Wowhead page.
 
 The data files are generated; they are not edited by hand.
 

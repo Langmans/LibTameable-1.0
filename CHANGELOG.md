@@ -9,6 +9,10 @@
 - Each beast's attack speed on Classic Era and WoW: Forever (beast.speed, from
   CMaNGOS' MeleeBaseAttackTime; on Forever for the beasts with Classic's NPC
   ID): a tamed beast keeps it on those clients.
+- WoW: Forever's teachers from Wowhead's hunter-pets tool ("Known when tamed"):
+  one rank per beast as the game has it, instead of every rank its level allows
+  (Prairie Wolf Alpha teaches Bite 2 alone), and Forever's 112 new beasts (Gray
+  Fox's Trickster's Dance); every tameable beast's attack speed there too.
 - GetAttackSpeed: also for a tameable beast that teaches nothing, on Classic Era
   (85 beasts whose speed is not 2.0, such as the Mangy Wolf's 1.7), summoned
   ones too. Petopia's speeds, measured on tamed pets, go before CMaNGOS' (the
