@@ -46,29 +46,29 @@ R[16831] = { ability = 16827, rank = 5, level = 32, teachers = { 4697, 5937, 263
 -- Claw 6
 R[16832] = { ability = 16827, rank = 6, level = 40, teachers = { 922, 5268, 5422, 222243 }, families = { F.bear, F.carrionBird, F.cat, F.crab, F.birdOfPrey, F.raptor, F.scorpid } }
 -- Bite 1
-R[17253] = { ability = 17253, rank = 1, level = 1, teachers = { 30, 471, 1131, 1138, 1509, 1922, 1994, 1999, 2958, 2959, 3110, 250868, 250873, 255887, 266851 }, families = { F.bat, F.bear, F.boar, F.carrionBird, F.cat, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf } }
+R[17253] = { ability = 17253, rank = 1, level = 1, teachers = { 30, 471, 1131, 1138, 1509, 1922, 1994, 1999, 2958, 2959, 3110, 250868, 250873, 255887, 266851 }, families = { F.bat, F.bear, F.boar, F.carrionBird, F.cat, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf, F.fox } }
 -- Bite 2
-R[17255] = { ability = 17253, rank = 2, level = 8, teachers = { 118, 442, 833, 834, 1132, 1133, 1195, 1555, 1693, 1765, 2000, 2001, 2960, 3461, 7319, 254589, 256492, 268530 }, families = { F.bat, F.boar, F.bear, F.carrionBird, F.cat, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf } }
+R[17255] = { ability = 17253, rank = 2, level = 8, teachers = { 118, 442, 833, 834, 1132, 1133, 1195, 1555, 1693, 1765, 2000, 2001, 2960, 3461, 7319, 254589, 256492, 268530 }, families = { F.bat, F.boar, F.bear, F.carrionBird, F.cat, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf, F.fox } }
 -- Bite 3
-R[17256] = { ability = 17253, rank = 3, level = 16, teachers = { 505, 521, 569, 1185, 1923, 2350, 3823, 4005, 4006, 4011, 11921 }, families = { F.bat, F.boar, F.bear, F.carrionBird, F.cat, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf } }
+R[17256] = { ability = 17253, rank = 3, level = 16, teachers = { 505, 521, 569, 1185, 1923, 2350, 3823, 4005, 4006, 4011, 11921 }, families = { F.bat, F.boar, F.bear, F.carrionBird, F.cat, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf, F.fox } }
 -- Bite 4
-R[17257] = { ability = 17253, rank = 4, level = 24, teachers = { 628, 1258, 2089, 2348, 2349, 2408, 3821, 3825 }, families = { F.bat, F.boar, F.bear, F.cat, F.carrionBird, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf } }
+R[17257] = { ability = 17253, rank = 4, level = 24, teachers = { 628, 1258, 2089, 2348, 2349, 2408, 3821, 3825 }, families = { F.bat, F.boar, F.bear, F.cat, F.carrionBird, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf, F.fox } }
 -- Bite 5
-R[17258] = { ability = 17253, rank = 5, level = 32, teachers = { 2563, 2565, 2727, 4143, 4341, 213795, 268831 }, families = { F.bat, F.boar, F.bear, F.cat, F.carrionBird, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf } }
+R[17258] = { ability = 17253, rank = 5, level = 32, teachers = { 2563, 2565, 2727, 4143, 4341, 213795, 268831 }, families = { F.bat, F.boar, F.bear, F.cat, F.carrionBird, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf, F.fox } }
 -- Bite 6
-R[17259] = { ability = 17253, rank = 6, level = 40, teachers = { 769, 4345, 5286 }, families = { F.bat, F.boar, F.bear, F.carrionBird, F.cat, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf } }
+R[17259] = { ability = 17253, rank = 6, level = 40, teachers = { 769, 4345, 5286 }, families = { F.bat, F.boar, F.bear, F.carrionBird, F.cat, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf, F.fox } }
 -- Bite 7
-R[17260] = { ability = 17253, rank = 7, level = 48, teachers = { 2505, 8961 }, families = { F.bat, F.boar, F.bear, F.cat, F.carrionBird, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf } }
+R[17260] = { ability = 17253, rank = 7, level = 48, teachers = { 2505, 8961 }, families = { F.bat, F.boar, F.bear, F.cat, F.carrionBird, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf, F.fox } }
 -- Bite 8
-R[17261] = { ability = 17253, rank = 8, level = 56, teachers = {}, families = { F.bat, F.boar, F.bear, F.cat, F.carrionBird, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf } }
+R[17261] = { ability = 17253, rank = 8, level = 56, teachers = {}, families = { F.bat, F.boar, F.bear, F.cat, F.carrionBird, F.gorilla, F.crocolisk, F.hyena, F.raptor, F.spider, F.tallstrider, F.turtle, F.windSerpent, F.wolf, F.fox } }
 -- Dash 1
-R[23099] = { ability = 23099, rank = 1, level = 30, teachers = { 682, 767, 976, 2727, 2728, 4688, 4724 }, families = { F.boar, F.cat, F.hyena, F.tallstrider, F.wolf, F.scorpid, F.turtle, F.gorilla, F.bear, F.crab, F.crocolisk, F.raptor, F.spider } }
+R[23099] = { ability = 23099, rank = 1, level = 30, teachers = { 682, 767, 976, 2727, 2728, 4688, 4724 }, families = { F.boar, F.cat, F.hyena, F.tallstrider, F.wolf, F.scorpid, F.turtle, F.gorilla, F.bear, F.crab, F.crocolisk, F.raptor, F.spider, F.fox } }
 -- Dash 2
-R[23109] = { ability = 23099, rank = 2, level = 40, teachers = { 2734, 5286, 5425, 263315 }, families = { F.boar, F.cat, F.hyena, F.tallstrider, F.wolf, F.scorpid, F.turtle, F.gorilla, F.bear, F.crab, F.crocolisk, F.raptor, F.spider } }
+R[23109] = { ability = 23099, rank = 2, level = 40, teachers = { 2734, 5286, 5425, 263315 }, families = { F.boar, F.cat, F.hyena, F.tallstrider, F.wolf, F.scorpid, F.turtle, F.gorilla, F.bear, F.crab, F.crocolisk, F.raptor, F.spider, F.fox } }
 -- Dash 3
-R[23110] = { ability = 23099, rank = 3, level = 50, teachers = {}, families = { F.boar, F.cat, F.hyena, F.tallstrider, F.wolf, F.scorpid, F.turtle, F.gorilla, F.bear, F.crab, F.crocolisk, F.raptor, F.spider } }
+R[23110] = { ability = 23099, rank = 3, level = 50, teachers = {}, families = { F.boar, F.cat, F.hyena, F.tallstrider, F.wolf, F.scorpid, F.turtle, F.gorilla, F.bear, F.crab, F.crocolisk, F.raptor, F.spider, F.fox } }
 -- Dive 1
-R[23145] = { ability = 23145, rank = 1, level = 30, teachers = { 2578, 2579, 4693 }, families = { F.carrionBird, F.birdOfPrey, F.windSerpent } }
+R[23145] = { ability = 23145, rank = 1, level = 30, teachers = { 2578, 2579, 4693 }, families = { F.carrionBird, F.birdOfPrey, F.windSerpent, F.bat } }
 -- Dive 2
 R[23147] = { ability = 23145, rank = 2, level = 40, teachers = { 213795, 222243 }, families = { F.bat, F.carrionBird, F.birdOfPrey, F.windSerpent } }
 -- Dive 3
